@@ -224,3 +224,13 @@ previsonesDental.forEach(function (elemento){
     document.write(`<p><i class="fas fa-hand-holding-medical"></i></i>  ${elemento.paciente} -  ${elemento.prevision}</p>`);
 });
 document.write("</div>");
+
+document.write("<div class='container mt-5 border boder-dark'>");
+var previsonesTraumatologia = traumatologia.filter(function (seguro){
+    return seguro.prevision == "FONASA"
+});
+
+previsonesTraumatologia.forEach(function (elemento){
+    document.write(`<p><i class="fas fa-hospital"></i>  ${elemento.paciente} -  ${elemento.prevision}</p>`);
+});
+document.write("</div>");
