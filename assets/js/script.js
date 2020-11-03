@@ -78,6 +78,9 @@ document.write(`
 
 document.write("</div>");
 
+radiologia.pop();
+radiologia.shift();
+
 document.write("<div class='container'>");
 document.write("<h3 class='mt-4'>Tabla de Radiologia</h3>");
 
@@ -176,3 +179,17 @@ var numero = ["1","54",-7,23,5,-4,2,24,-43];
 console.log(numero.sort(function (a,b) {  
     return b - a;
 }));
+
+document.write("<div class='container'>");
+document.write("<br>");
+dental.forEach(function (elemento){
+    document.write(`<p><i class="fas fa-arrow-right"></i> ${elemento.hora} - ${elemento.especialista} - ${elemento.paciente} - ${elemento.rut} - ${elemento.prevision}</p>`);
+});
+document.write("</div>");
+
+document.write("<div class='container'>");
+for (let index = 0; index < dental.length; index++) {
+    datosDental = Object.values(dental[index]);
+    document.write(`<p><i class="fas fa-arrow-right"></i>  ${datosDental.join(" - ")}</p>`);
+};
+document.write("</div>");
