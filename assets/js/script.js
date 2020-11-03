@@ -40,3 +40,116 @@ document.write("<h3>Atenciones traumatologia</h3>");
 document.write(`<p><i class="fas fa-arrow-right"></i> Primero atención: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última antención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}</p>`);
 
 document.write("</div>");
+
+document.write("<div class='container'>");
+document.write("<h3 class='mt-4'>Tabla de Dental</h3>");
+document.write(`
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Hora</th>
+                    <th>Especialista</th>
+                    <th>Paciente</th>
+                    <th>Rut</th>
+                    <th>Previsión</th>
+                </tr>
+            </thead>
+        <tbody>
+`);
+
+dental.forEach(function (elemento,index) {
+    document.write(`
+        <tr>
+            <td>${index+1}</td>
+            <td>${elemento.hora}</td>
+            <td>${elemento.especialista}</td>
+            <td>${elemento.paciente}</td>
+            <td>${elemento.rut}</td>
+            <td>${elemento.prevision}</td>
+        </tr>
+    `)
+});
+
+document.write(`
+        </tbody>
+     </table>
+`);
+
+document.write("</div>");
+
+document.write("<div class='container'>");
+document.write("<h3 class='mt-4'>Tabla de Radiologia</h3>");
+
+document.write(`
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Hora</th>
+                    <th>Especialista</th>
+                    <th>Paciente</th>
+                    <th>Rut</th>
+                    <th>Previsión</th>
+                </tr>
+            </thead>
+        <tbody>
+`);
+
+radiologia.forEach(function (elemento,index) {
+    document.write(`
+        <tr>
+            <td>${index+1}</td>
+            <td>${elemento.hora}</td>
+            <td>${elemento.especialista}</td>
+            <td>${elemento.paciente}</td>
+            <td>${elemento.rut}</td>
+            <td>${elemento.prevision}</td>
+        </tr>
+    `)
+});
+
+document.write(`
+        </tbody>
+     </table>
+`);
+
+document.write("</div>");
+
+document.write("<div class='container'>");
+document.write("<h3 class='mt-4'>Tabla de Traumatologia</h3>");
+
+document.write(`
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Hora</th>
+                    <th>Especialista</th>
+                    <th>Paciente</th>
+                    <th>Rut</th>
+                    <th>Previsión</th>
+                </tr>
+            </thead>
+        <tbody>
+`);
+
+traumatologia.forEach(function (elemento,index) {
+    document.write(`
+        <tr>
+            <td>${index+1}</td>
+            <td>${elemento.hora}</td>
+            <td>${elemento.especialista}</td>
+            <td>${elemento.paciente}</td>
+            <td>${elemento.rut}</td>
+            <td>${elemento.prevision}</td>
+        </tr>
+    `)
+});
+
+document.write(`
+        </tbody>
+     </table>
+`);
+
+document.write("</div>");
