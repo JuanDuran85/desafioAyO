@@ -193,3 +193,34 @@ for (let index = 0; index < dental.length; index++) {
     document.write(`<p><i class="fas fa-arrow-right"></i>  ${datosDental.join(" - ")}</p>`);
 };
 document.write("</div>");
+
+document.write("<div class='container'>");
+var arregloTotal = dental.concat(traumatologia, radiologia);
+arregloTotal.forEach(function (elemento) {
+    document.write(`<p><i class="fas fa-syringe"></i>  ${elemento.paciente}</p>`);
+});
+
+document.write("</div>");
+
+document.write("<div class='container mt-5 border boder-dark'>");
+dental.forEach(function (elemento) {
+    document.write(`<p><i class="fas fa-syringe"></i>  ${elemento.paciente}</p>`);
+});
+traumatologia.forEach(function (elemento) {
+    document.write(`<p><i class="fas fa-syringe"></i>  ${elemento.paciente}</p>`);
+});
+radiologia.forEach(function (elemento) {
+    document.write(`<p><i class="fas fa-syringe"></i>  ${elemento.paciente}</p>`);
+});
+
+document.write("</div>");
+
+document.write("<div class='container mt-5 border boder-dark'>");
+var previsonesDental = dental.filter(function (seguro){
+    return seguro.prevision == "ISAPRE"
+});
+
+previsonesDental.forEach(function (elemento){
+    document.write(`<p><i class="fas fa-hand-holding-medical"></i></i>  ${elemento.paciente} -  ${elemento.prevision}</p>`);
+});
+document.write("</div>");
