@@ -238,3 +238,37 @@ previsonesTraumatologia.forEach(function (elemento){
     document.write(`<p><i class="fas fa-hospital"></i>  ${elemento.paciente} -  ${elemento.prevision}</p>`);
 });
 document.write("</div>");
+
+
+
+var experiencias = [
+    { titulo: "Practica", anos: 1 }, 
+    { titulo: "Programador Junior", anos: 2 }, 
+    { titulo: "Programador Senior", anos: 4 }, 
+    { titulo: "Jefe de proyecto", anos: 5 }
+];
+
+var experienciaIndice = experiencias.findIndex(function (gente) {
+    return gente.anos >= 5;
+})
+console.log(experienciaIndice);
+
+var pokemones = [
+    { nombre: 'Charmander', level: 22 }, 
+    { nombre: '      PikacHu         ', level: 28 }, 
+    { nombre: 'Dito', level: 37 }
+];
+
+var pikachu = pokemones.find(function (monito) {  
+    return monito.nombre.toLocaleLowerCase().trim() == 'pikachu';
+});
+
+console.log(pikachu);
+
+var pokemones = [{ nombre: 'Pikachu', level: 28 }, { nombre: 'Charmander', level: 22 }, { nombre: 'Dito', level: 37 },];
+
+var poder = pokemones.filter(function (poderes) {
+    return poderes.level > 30;
+});
+
+console.log(poder);
